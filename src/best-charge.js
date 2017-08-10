@@ -78,7 +78,7 @@ function halfPrice(allitems){
 }
 
 // #5 用满减算
-function debatePrice(allitems){
+function rebatePrice(allitems){
   let sum = 0;
   let result=[];
   for(let each_item of allitems){
@@ -122,7 +122,7 @@ function useRebate(rebate_price_result){
 
 }
 
-// 打印最终结果
+// #6 打印最终结果
 function printResult(allitems_detail,half_price_result,rebate_price_result){
   let result ='\n============= 订餐明细 =============\n';
   for(let each_item of allitems_detail){
@@ -152,7 +152,7 @@ module.exports=function bestCharge(selectedItems) {
   let selected_items =transSelectedItem(selectedItems);
   let allitems_detail =getDetailItems(selected_items);
   let half_price_result = halfPrice(allitems_detail);
-  let rebate_price_result = debatePrice(allitems_detail);
+  let rebate_price_result = rebatePrice(allitems_detail);
   let result=printResult(allitems_detail,half_price_result,rebate_price_result)
   return result;
 }
