@@ -3,7 +3,7 @@
 const promotion = require('./promotions.js');
 const loadItem = require('./items.js');
 
-// #2 转换输入的格式
+
 function transSelectedItem(selectionItems){
   let new_arr =[];
   for(let item of selectionItems){
@@ -25,7 +25,6 @@ function find(collection,item){
 
 }
 
-// #3 补充item所有的相关详细信息
 function getDetailItems(items){
   let new_arr=[];
   let all_items = loadItem.loadAllItems();
@@ -57,7 +56,6 @@ function findHalf(half_items,each_item){
   return false;
 }
 
-// #4 用指定菜品半价算
 function halfPrice(allitems){
   let sum=0;
   let half_arr=[];
@@ -77,7 +75,6 @@ function halfPrice(allitems){
   return result;
 }
 
-// #5 用满减算
 function rebatePrice(allitems){
   let sum = 0;
   let result=[];
@@ -122,7 +119,6 @@ function useRebate(rebate_price_result){
 
 }
 
-// #6 打印最终结果
 function printResult(allitems_detail,half_price_result,rebate_price_result){
   let result ='\n============= 订餐明细 =============\n';
   for(let each_item of allitems_detail){
