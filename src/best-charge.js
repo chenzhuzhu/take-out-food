@@ -90,7 +90,6 @@ function debatePrice(allitems){
   }else{
     result=[sum,false];
   }
-  console.log(result)
   return result;
 
 }
@@ -131,8 +130,6 @@ function printResult(allitems_detail,half_price_result,rebate_price_result){
   }
   result+='-----------------------------------\n'
   if (half_price_result['half_arr'].length!=0){
-    console.log(half_price_result['sum'])
-    console.log(rebate_price_result[0])
     result+='使用优惠:\n'
     if (half_price_result['sum']<rebate_price_result[0]){
       result += useHalf(half_price_result);
@@ -155,7 +152,6 @@ module.exports=function bestCharge(selectedItems) {
   let selected_items =transSelectedItem(selectedItems);
   let allitems_detail =getDetailItems(selected_items);
   let half_price_result = halfPrice(allitems_detail);
-  console.log(half_price_result)
   let rebate_price_result = debatePrice(allitems_detail);
   let result=printResult(allitems_detail,half_price_result,rebate_price_result)
   return result;
