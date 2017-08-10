@@ -124,7 +124,7 @@ function useRebate(rebate_price_result){
 
 // 打印最终结果
 function printResult(allitems_detail,half_price_result,rebate_price_result){
-  let result ='============= 订餐明细 =============\n';
+  let result ='\n============= 订餐明细 =============\n';
   for(let each_item of allitems_detail){
     result+=each_item['name']+' x '+each_item['count']+' = '+each_item['price']*each_item['count']+'元\n'
   }
